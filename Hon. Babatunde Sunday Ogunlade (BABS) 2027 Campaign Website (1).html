@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hon. Babatunde Sunday Ogunlade (BABS) - Ibarapa East 2027 | Oyo State House of Assembly</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apcGreen: '#006633',
+                        apcGold: '#D4AF37',
+                        apcDark: '#0A192F',
+                        apcBlue: '#004080',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(0, 102, 51, 0.88) 100%);
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #006633;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-apcGold selection:text-apcDark">
+
+    <!-- Top Bar / Emergency / Notice Banner -->
+    <div class="bg-apcDark text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><i class="fas fa-bullhorn text-apcGold mr-2"></i> <strong>APC Ibarapa East 2027</strong></span>
+                <span class="hidden md:inline text-gray-400">|</span>
+                <span class="hidden md:inline text-gray-300">Vision to Lead. Capacity to Deliver.</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+2348034957595" class="hover:text-apcGold transition"><i class="fas fa-phone-alt mr-1 text-apcGold"></i> +234 803 495 7595</a>
+                <span class="text-gray-400">|</span>
+                <a href="mailto:babstunde2008@gmail.com" class="hover:text-apcGold transition"><i class="fas fa-envelope mr-1 text-apcGold"></i> babstunde2008@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo & Candidate Name -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+                    <img src="logo.svg" onerror="this.src='https://placehold.co/60x60/006633/ffffff?text=BABS'" alt="BABS Logo" class="w-12 h-12 rounded-full object-cover border-2 border-apcGold shadow-md">
+                    <div>
+                        <h1 class="font-extrabold text-lg sm:text-xl text-apcDark tracking-tight leading-tight">HON. BABATUNDE SUNDAY</h1>
+                        <p class="text-xs font-semibold text-apcGreen tracking-wider uppercase">OGUNLADE (BABS) <span class="text-apcGold">• OYHA 2027</span></p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <button onclick="switchTab('home')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition active-tab" data-tab="home">Home</button>
+                    <button onclick="switchTab('about')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition" data-tab="about">About Babs</button>
+                    <button onclick="switchTab('political')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition" data-tab="political">Political Life & Agenda</button>
+                    <button onclick="switchTab('community')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition" data-tab="community">Community & Humanitarian</button>
+                    <button onclick="switchTab('media')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition" data-tab="media">News & Gallery</button>
+                    <button onclick="switchTab('contact')" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-apcGreen hover:bg-green-50 transition" data-tab="contact">Get Involved</button>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button onclick="openModal('volunteerModal')" class="bg-apcGreen text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg hover:bg-green-700 transition transform hover:-translate-y-0.5 flex items-center">
+                        <i class="fas fa-hands-helping mr-2 text-apcGold"></i> Volunteer
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-gray-700 hover:text-apcGreen hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+            <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">Home</button>
+            <button onclick="switchTab('about'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">About Babs</button>
+            <button onclick="switchTab('political'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">Political Life & Agenda</button>
+            <button onclick="switchTab('community'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">Community & Humanitarian</button>
+            <button onclick="switchTab('media'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">News & Gallery</button>
+            <button onclick="switchTab('contact'); toggleMobileMenu();" class="block w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-green-50 hover:text-apcGreen">Get Involved & Contact</button>
+            <div class="pt-2">
+                <button onclick="openModal('volunteerModal'); toggleMobileMenu();" class="w-full bg-apcGreen text-white py-3 rounded-xl font-bold text-center shadow-md">Join / Volunteer</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+
+        <!-- ==================== HOME TAB ==================== -->
+        <section id="tab-home" class="tab-content active">
+            <!-- Hero Banner -->
+            <div class="relative bg-apcDark text-white overflow-hidden py-20 lg:py-32">
+                <div class="absolute inset-0 opacity-40 bg-cover bg-center" style="background-image: url('IMG-20260914-WA0005.jpg');"></div>
+                <div class="absolute inset-0 hero-gradient"></div>
+                
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="inline-flex items-center space-x-2 bg-apcGold/20 border border-apcGold text-apcGold px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                                <i class="fas fa-star"></i> <span>All Progressives Congress (APC) • Ibarapa East Constituency</span>
+                            </div>
+                            <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-white">
+                                VISION TO LEAD. <br><span class="text-apcGold">CAPACITY TO DELIVER.</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl text-gray-200 font-light leading-relaxed max-w-2xl">
+                                Welcome to the official campaign portal of <strong class="text-white font-semibold">Hon. Babatunde Sunday Ogunlade (BABS)</strong> for Oyo State House of Assembly 2027. Dedicated to grassroots progress, financial accountability, and unprecedented community development.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-4">
+                                <button onclick="switchTab('political')" class="bg-apcGold text-apcDark px-8 py-4 rounded-xl font-extrabold text-base shadow-xl hover:bg-yellow-400 transition transform hover:-translate-y-1 flex items-center">
+                                    <span>View 2027 Agenda</span> <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                                <button onclick="openModal('volunteerModal')" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-base backdrop-blur-md transition flex items-center">
+                                    <i class="fas fa-user-plus mr-2 text-apcGold"></i> Join Movement
+                                </button>
+                            </div>
+
+                            <!-- Quick Stats Badge -->
+                            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 mt-8">
+                                <div>
+                                    <p class="text-3xl sm:text-4xl font-extrabold text-apcGold">2003</p>
+                                    <p class="text-xs text-gray-300">Progressive Member</p>
+                                </div>
+                                <div>
+                                    <p class="text-3xl sm:text-4xl font-extrabold text-white">M.Sc.</p>
+                                    <p class="text-xs text-gray-300">Accounting (UNILAG)</p>
+                                </div>
+                                <div>
+                                    <p class="text-3xl sm:text-4xl font-extrabold text-apcGold">2027</p>
+                                    <p class="text-xs text-gray-300">OYHA Mandate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Candidate Portrait Card -->
+                        <div class="lg:col-span-5 flex justify-center">
+                            <div class="relative">
+                                <div class="absolute -inset-4 bg-gradient-to-r from-apcGold to-apcGreen rounded-3xl blur-lg opacity-70 animate-pulse"></div>
+                                <div class="relative bg-white p-3 rounded-3xl shadow-2xl max-w-sm w-full text-center">
+                                    <img src="IMG-20260918-WA0007(1).jpg" onerror="this.src='https://placehold.co/400x500/006633/ffffff?text=Hon.+Babs'" alt="Hon. Babatunde Sunday Ogunlade" class="w-full h-96 object-cover rounded-2xl shadow-inner">
+                                    <div class="mt-4 pb-2">
+                                        <h3 class="text-xl font-bold text-apcDark">Hon. Babatunde Sunday Ogunlade</h3>
+                                        <p class="text-sm font-semibold text-apcGreen">House of Assembly Candidate, Ibarapa East</p>
+                                        <div class="mt-3 inline-block bg-apcGold/10 border border-apcGold/40 text-apcDark px-4 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+                                            People • Progress • Possibilities
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Election Countdown & Slogan Banner -->
+            <div class="bg-apcGreen text-white py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mb-2">Countdown to Ibarapa East Victory 2027</h2>
+                    <p class="text-green-100 mb-8 max-w-xl mx-auto text-sm sm:text-base">Together, let's build a legacy of transparent representation, economic empowerment, and community development.</p>
+                    
+                    <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+                        <div class="bg-black/20 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span id="days" class="text-4xl sm:text-5xl font-black text-apcGold">--</span>
+                            <p class="text-xs uppercase tracking-wider text-green-200 mt-1">Days</p>
+                        </div>
+                        <div class="bg-black/20 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span id="hours" class="text-4xl sm:text-5xl font-black text-apcGold">--</span>
+                            <p class="text-xs uppercase tracking-wider text-green-200 mt-1">Hours</p>
+                        </div>
+                        <div class="bg-black/20 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span id="minutes" class="text-4xl sm:text-5xl font-black text-apcGold">--</span>
+                            <p class="text-xs uppercase tracking-wider text-green-200 mt-1">Minutes</p>
+                        </div>
+                        <div class="bg-black/20 backdrop-blur-md p-4 rounded-2xl border border-white/10">
+                            <span id="seconds" class="text-4xl sm:text-5xl font-black text-apcGold">--</span>
+                            <p class="text-xs uppercase tracking-wider text-green-200 mt-1">Seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidate Snapshot & Core Pillars Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Meet The Candidate</span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">An Accomplished Leader With Proven Integrity</h2>
+                        <p class="text-gray-600 mt-4 text-base sm:text-lg">Combining top-tier financial expertise, corporate executive leadership, and decades of grassroots progressive commitment for Ibarapa East.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Pillar 1 -->
+                        <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-apcGreen/10 text-apcGreen rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-apcGreen group-hover:text-white transition">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-apcDark mb-3">Academic & Professional Excellence</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Holds an M.Sc. in Accounting (Ph.D. Grade, UNILAG 2025) and B.Sc. (Crescent Univ, 2020). Student Member of ICAN with deep expertise in SAP and Octopus ERP financial frameworks.
+                            </p>
+                            <button onclick="switchTab('about')" class="mt-6 text-apcGreen font-bold text-sm flex items-center hover:underline">
+                                Read Full Bio <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-apcGold/20 text-yellow-700 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-apcGold group-hover:text-apcDark transition">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-apcDark mb-3">Unwavering Party Loyalty</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Active progressive member since 2003. Demonstrated exemplary sportsmanship in 2023 by stepping down for the party candidate, paying party house rent, and hosting party faithful every New Year.
+                            </p>
+                            <button onclick="switchTab('political')" class="mt-6 text-apcGreen font-bold text-sm flex items-center hover:underline">
+                                Explore Political Journey <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition group">
+                            <div class="w-14 h-14 bg-blue-100 text-apcBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-apcBlue group-hover:text-white transition">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-apcDark mb-3">Corporate & Executive Leadership</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Currently MD/CEO of Skylark Homes & Properties Ltd; former Deputy MD / GM Finance at Portal Realties Ltd. Experienced in defining growth strategy, budgeting, and project execution.
+                            </p>
+                            <button onclick="switchTab('about')" class="mt-6 text-apcGreen font-bold text-sm flex items-center hover:underline">
+                                View Experience <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== ABOUT TAB ==================== -->
+        <section id="tab-about" class="tab-content py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Comprehensive Biography</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">About Hon. Babatunde Sunday Ogunlade</h2>
+                    <p class="text-gray-600 mt-4 text-base">A meticulous accountant, accomplished corporate executive, and dedicated family man committed to community transformation.</p>
+                </div>
+
+                <!-- Personal Data Card -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 mb-12 border border-gray-100">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-4 flex flex-col items-center">
+                            <img src="IMG-20260918-WA0008.jpg" onerror="this.src='https://placehold.co/300x350/006633/ffffff?text=Babs'" alt="Hon. Babs Profile" class="w-64 h-80 object-cover rounded-2xl shadow-lg border-4 border-apcGold">
+                            <h3 class="mt-4 text-xl font-bold text-apcDark">Hon. Babatunde S. Ogunlade</h3>
+                            <p class="text-sm font-semibold text-apcGreen">MD/CEO Skylark Homes & Properties</p>
+                        </div>
+                        <div class="lg:col-span-8 space-y-6">
+                            <h3 class="text-2xl font-black text-apcDark border-b pb-3">Personal Data & Background</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                                <div class="bg-gray-50 p-4 rounded-xl">
+                                    <strong class="text-apcDark block mb-1">Date & Place of Birth:</strong>
+                                    <span class="text-gray-600">20th August, 1980, Eruwa, Oyo State</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-xl">
+                                    <strong class="text-apcDark block mb-1">Local Government / State:</strong>
+                                    <span class="text-gray-600">Ibarapa East L.G.A, Oyo State</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-xl">
+                                    <strong class="text-apcDark block mb-1">Marital Status:</strong>
+                                    <span class="text-gray-600">Married with 3 Children (Ages 13, 12, and 6)</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-xl">
+                                    <strong class="text-apcDark block mb-1">Professional Affiliation:</strong>
+                                    <span class="text-gray-600">Student Member, Institute of Chartered Accountants of Nigeria (ICAN)</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-apcDark mb-2">Software Competencies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-apcGreen/10 text-apcGreen px-3 py-1 rounded-lg text-xs font-semibold">Octopus (ERP)</span>
+                                    <span class="bg-apcGreen/10 text-apcGreen px-3 py-1 rounded-lg text-xs font-semibold">SAP (FI Modules)</span>
+                                    <span class="bg-apcGreen/10 text-apcGreen px-3 py-1 rounded-lg text-xs font-semibold">Microsoft Office Suite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Professional Experience Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Educational Qualifications -->
+                    <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 bg-apcGreen text-white rounded-xl flex items-center justify-center text-xl shadow-md">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-apcDark">Educational Excellence</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-apcGreen pl-4 py-1">
+                                <span class="text-xs font-bold text-apcGold uppercase bg-apcDark px-2 py-0.5 rounded">2023 - 2025</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">M.Sc. Accounting (Ph.D. Grade)</h4>
+                                <p class="text-sm text-gray-600">University of Lagos, Akoka, Lagos State, Nigeria.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGreen pl-4 py-1">
+                                <span class="text-xs font-bold text-apcGold uppercase bg-apcDark px-2 py-0.5 rounded">2018 - 2020</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">B.Sc. Accounting (Second Class Upper)</h4>
+                                <p class="text-sm text-gray-600">Crescent University, Abeokuta, Ogun State, Nigeria.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGreen pl-4 py-1">
+                                <span class="text-xs font-bold text-apcGold uppercase bg-apcDark px-2 py-0.5 rounded">2004 - 2006</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Higher National Diploma (HND Accounting) - Lower Credit</h4>
+                                <p class="text-sm text-gray-600">The Polytechnic Ibadan, Oyo State, Nigeria.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGreen pl-4 py-1">
+                                <span class="text-xs font-bold text-apcGold uppercase bg-apcDark px-2 py-0.5 rounded">2000 - 2002</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">National Diploma (ND Accounting) - Lower Credit</h4>
+                                <p class="text-sm text-gray-600">Federal Polytechnic Ede, Osun State, Nigeria.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGreen pl-4 py-1">
+                                <span class="text-xs font-bold text-apcGold uppercase bg-apcDark px-2 py-0.5 rounded">1989 - 1994</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Senior School Certificate (WASSCE)</h4>
+                                <p class="text-sm text-gray-600">Apode High School, Eruwa, Oyo State.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Experience -->
+                    <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 bg-apcGold text-apcDark rounded-xl flex items-center justify-center text-xl shadow-md">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-apcDark">Professional Journey</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-apcGold pl-4 py-1">
+                                <span class="text-xs font-bold text-white uppercase bg-apcGreen px-2 py-0.5 rounded">2024 - Present</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Managing Director / CEO</h4>
+                                <p class="text-sm text-gray-600">Skylark Homes & Properties Ltd, Ikeja, Lagos.</p>
+                                <p class="text-xs text-gray-500 mt-1">Defining vision, growth strategy, supervising project execution, and overseeing budgeting & financial planning.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGold pl-4 py-1">
+                                <span class="text-xs font-bold text-white uppercase bg-apcGreen px-2 py-0.5 rounded">2020 - 2024</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Deputy MD / General Manager Finance</h4>
+                                <p class="text-sm text-gray-600">Portal Realties Ltd, Opebi, Lagos.</p>
+                                <p class="text-xs text-gray-500 mt-1">Overseeing all accounting operations, pre-audit reports, and financial controls.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGold pl-4 py-1">
+                                <span class="text-xs font-bold text-white uppercase bg-apcGreen px-2 py-0.5 rounded">2016 - 2020</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Internal Control & GM Finance</h4>
+                                <p class="text-sm text-gray-600">Portal Realties Ltd, Lagos.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGold pl-4 py-1">
+                                <span class="text-xs font-bold text-white uppercase bg-apcGreen px-2 py-0.5 rounded">2015 - 2016</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Accountant</h4>
+                                <p class="text-sm text-gray-600">WS FZE Civil Construction Company, Ladol Free Zone, Lagos.</p>
+                            </div>
+                            <div class="border-l-4 border-apcGold pl-4 py-1">
+                                <span class="text-xs font-bold text-white uppercase bg-apcGreen px-2 py-0.5 rounded">2007 - 2014</span>
+                                <h4 class="text-lg font-bold text-apcDark mt-1">Audit & Accounting Roles</h4>
+                                <p class="text-sm text-gray-600">Lufama Global Concepts & Tower Extrusions Lagos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== POLITICAL LIFE & AGENDA TAB ==================== -->
+        <section id="tab-political" class="tab-content py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Political Life & Party Contributions</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">Committed to Progressive Ideals</h2>
+                    <p class="text-gray-600 mt-4 text-base">Over two decades of steadfast party loyalty, selflessness, and grassroots service within the All Progressives Congress (APC).</p>
+                </div>
+
+                <!-- Party Contributions Highlights -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm text-center">
+                        <div class="w-16 h-16 bg-apcGreen text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-apcDark mb-2">20+ Years Member</h3>
+                        <p class="text-gray-600 text-sm">Active progressive party membership since 2003, consistently championing party values and grassroots mobilization in Ibarapa East.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm text-center">
+                        <div class="w-16 h-16 bg-apcGold text-apcDark rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-apcDark mb-2">Exemplary Sportsmanship</h3>
+                        <p class="text-gray-600 text-sm">House of Assembly Aspirant in 2023 who graciously stepped down in support of party leadership decisions for overall electoral success.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm text-center">
+                        <div class="w-16 h-16 bg-apcDark text-apcGold rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-apcDark mb-2">Tangible Support</h3>
+                        <p class="text-gray-600 text-sm">Donated a generator to power the Party House in 2022, paid Party House rent, and hosts party faithful every January 1st.</p>
+                    </div>
+                </div>
+
+                <!-- 2027 Legislative Agenda -->
+                <div class="bg-gradient-to-r from-apcDark to-apcGreen text-white rounded-3xl p-8 sm:p-12 shadow-2xl mb-16">
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <span class="bg-apcGold text-apcDark px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest">Our Blueprint</span>
+                        <h3 class="text-3xl font-black mt-3 text-white">The Ibarapa East 2027 Legislative Agenda</h3>
+                        <p class="text-gray-200 mt-2">"Vision to Lead. Capacity to Deliver." Focus areas designed for impactful representation in the Oyo State House of Assembly (OYHA).</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-balance-scale"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Legislative Excellence</h4>
+                            <p class="text-sm text-gray-200">Advocating for robust bills, constituency-focused motions, and accountable governance that directly impacts Ibarapa East communities.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-users"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Youth Empowerment</h4>
+                            <p class="text-sm text-gray-200">Creating sustainable skills acquisition programs, digital literacy hubs, sports development, and employment opportunities for youths.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-road"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Infrastructural Development</h4>
+                            <p class="text-sm text-gray-200">Lobbying for rural-urban integration, potable water projects, solar electrification, and better rural roads for farmers.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-seedling"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Agricultural Support</h4>
+                            <p class="text-sm text-gray-200">Empowering local farmers with modern farming inputs, cooperative credit facilities, and reliable market access channels.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-book-reader"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Education & Student Welfare</h4>
+                            <p class="text-sm text-gray-200">Providing bursary awards, learning materials, and infrastructural upgrades for primary and secondary schools across Eruwa and environs.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                            <div class="text-apcGold text-2xl mb-3"><i class="fas fa-hand-holding-heart"></i></div>
+                            <h4 class="text-lg font-bold mb-2">Community Welfare</h4>
+                            <p class="text-sm text-gray-200">Healthcare outreach programs, elderly support schemes, and continuous engagement with traditional and religious leaders.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 text-center">
+                        <button onclick="downloadManifesto()" class="bg-apcGold text-apcDark px-8 py-4 rounded-xl font-extrabold text-sm shadow-xl hover:bg-yellow-400 transition inline-flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download Complete 2027 Manifesto & Summary Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== COMMUNITY & HUMANITARIAN TAB ==================== -->
+        <section id="tab-community" class="tab-content py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Grassroots Roots & Impact</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">Community Leadership & Humanitarian Services</h2>
+                    <p class="text-gray-600 mt-4 text-base">Deeply rooted in Eruwa and Ibarapa East with a lifelong track record of student unionism, youth mentoring, and humanitarian philanthropy.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-black text-apcDark">Rooted in Ibarapa East From Day One</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Hon. Babatunde Sunday Ogunlade's passion for community service began during his formative years in Eruwa. He has consistently served in various capacities to uplift youths, students, and community associations.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                                <div class="w-10 h-10 bg-apcGreen text-white rounded-xl flex items-center justify-center font-bold shrink-0">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Intellect Club of Eruwa</h4>
+                                    <p class="text-sm text-gray-600">Active member fostering intellectual discourse and community development initiatives.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                                <div class="w-10 h-10 bg-apcGold text-apcDark rounded-xl flex items-center justify-center font-bold shrink-0">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Eruwa Youth Movement</h4>
+                                    <p class="text-sm text-gray-600">Financial member and staunch supporter of youth empowerment and community security initiatives.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                                <div class="w-10 h-10 bg-apcDark text-white rounded-xl flex items-center justify-center font-bold shrink-0">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Student Union Leadership</h4>
+                                    <p class="text-sm text-gray-600">Member of Federation of Eruwa Student Union (National Body) and former President, Federation Oyo State Student Union, Federal Polytechnic Ede (2002).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Humanitarian Photo / Card -->
+                    <div class="relative">
+                        <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100">
+                            <img src="IMG-20260909-WA0062.jpg" onerror="this.src='https://placehold.co/500x600/006633/ffffff?text=Babs+2027'" alt="Humanitarian Outreach" class="w-full h-[450px] object-cover rounded-2xl">
+                            <div class="mt-4 p-4 bg-green-50 rounded-2xl border border-green-200">
+                                <h4 class="font-bold text-apcGreen flex items-center">
+                                    <i class="fas fa-heart text-apcGold mr-2"></i> Annual New Year Hosting
+                                </h4>
+                                <p class="text-xs text-gray-600 mt-1">Every January 1st, Hon. Babs opens his doors to host party faithful, elders, youths, and community members in a celebration of unity, gratitude, and renewed hope.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NEWS & GALLERY TAB ==================== -->
+        <section id="tab-media" class="tab-content py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Media & Updates</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">Campaign News & Photo Gallery</h2>
+                    <p class="text-gray-600 mt-4 text-base">Stay updated with the latest campaign tour stops, press releases, community engagements, and visual highlights.</p>
+                </div>
+
+                <!-- News Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <img src="IMG-20260914-WA0010.jpg" onerror="this.src='https://placehold.co/400x250/006633/ffffff?text=News+1'" alt="News 1" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-apcGreen uppercase bg-green-100 px-3 py-1 rounded-full">Press Release</span>
+                                <h3 class="text-xl font-bold text-apcDark mt-3 mb-2">Hon. Babs Declares Intention for Oyo State House of Assembly 2027</h3>
+                                <p class="text-gray-600 text-sm">Addressing party leaders and stakeholders in Eruwa, Hon. Babatunde Sunday Ogunlade formally declared his aspiration under the APC banner.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-xs text-gray-500">
+                                <span><i class="far fa-calendar-alt mr-1"></i> October 2026</span>
+                                <span class="text-apcGreen font-bold cursor-pointer hover:underline" onclick="openModal('newsModal1')">Read More <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <img src="IMG-20260918-WA0008.jpg" onerror="this.src='https://placehold.co/400x250/006633/ffffff?text=News+2'" alt="News 2" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-apcGold uppercase bg-yellow-100 px-3 py-1 rounded-full text-yellow-800">Community Outreach</span>
+                                <h3 class="text-xl font-bold text-apcDark mt-3 mb-2">Empowering Ibarapa Youths Through Digital & Vocational Skills</h3>
+                                <p class="text-gray-600 text-sm">Skylark Homes CEO champions youth empowerment initiatives across Ibarapa East, distributing learning materials and supporting student bodies.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-xs text-gray-500">
+                                <span><i class="far fa-calendar-alt mr-1"></i> September 2026</span>
+                                <span class="text-apcGreen font-bold cursor-pointer hover:underline" onclick="openModal('newsModal2')">Read More <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <img src="IMG-20260914-WA0005.jpg" onerror="this.src='https://placehold.co/400x250/006633/ffffff?text=News+3'" alt="News 3" class="w-full h-56 object-cover">
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-apcBlue uppercase bg-blue-100 px-3 py-1 rounded-full">Party Leadership</span>
+                                <h3 class="text-xl font-bold text-apcDark mt-3 mb-2">APC Stakeholders Endorse Unity and Grassroots Mobilization</h3>
+                                <p class="text-gray-600 text-sm">Party leaders commend Hon. Babs for his consistent financial support, party house rent contributions, and steadfast dedication since 2003.</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-xs text-gray-500">
+                                <span><i class="far fa-calendar-alt mr-1"></i> August 2026</span>
+                                <span class="text-apcGreen font-bold cursor-pointer hover:underline" onclick="openModal('newsModal3')">Read More <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery Grid -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-black text-apcDark mb-8 text-center">Campaign Photo Gallery</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer">
+                            <img src="IMG-20260918-WA0007(1).jpg" alt="Gallery 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer">
+                            <img src="IMG-20260909-WA0062.jpg" alt="Gallery 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer">
+                            <img src="IMG-20260914-WA0005.jpg" alt="Gallery 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-md group cursor-pointer">
+                            <img src="IMG-20260914-WA0010.jpg" alt="Gallery 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== GET INVOLVED & CONTACT TAB ==================== -->
+        <section id="tab-contact" class="tab-content py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-apcGreen font-bold text-sm tracking-wider uppercase bg-green-50 px-3 py-1 rounded-full border border-green-200">Join The Movement</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-apcDark mt-3">Get Involved & Connect With Us</h2>
+                    <p class="text-gray-600 mt-4 text-base">Your voice, support, and involvement are vital for our electoral victory in Ibarapa East 2027. Reach out or sign up today!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Contact Information & Offices -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 space-y-6">
+                            <h3 class="text-2xl font-black text-apcDark">Campaign Headquarters</h3>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-apcGreen/10 text-apcGreen rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Constituency Office</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Ibarapa East Local Government Area, Eruwa, Oyo State, Nigeria.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-apcGold/20 text-yellow-700 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Lagos Liaison Office</h4>
+                                    <p class="text-sm text-gray-600 mt-1">Skylark Homes & Properties Ltd, 29 Oritshe Street, Off Obafemi Awolowo Way, Ikeja, Lagos State.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 text-apcBlue rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Direct Helpline</h4>
+                                    <p class="text-sm text-gray-600 mt-1">+234 803 495 7595, +234 808 180 9559</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-green-100 text-apcGreen rounded-xl flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-apcDark">Email Address</h4>
+                                    <p class="text-sm text-gray-600 mt-1">babstunde2008@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-gray-100 flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-apcDark text-white rounded-full flex items-center justify-center hover:bg-apcGreen transition"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="w-10 h-10 bg-apcDark text-white rounded-full flex items-center justify-center hover:bg-apcGreen transition"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="w-10 h-10 bg-apcDark text-white rounded-full flex items-center justify-center hover:bg-apcGreen transition"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 bg-apcDark text-white rounded-full flex items-center justify-center hover:bg-apcGreen transition"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Volunteer / Constituent Feedback Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-gray-100">
+                            <h3 class="text-2xl font-black text-apcDark mb-2">Volunteer / Send a Message</h3>
+                            <p class="text-gray-600 text-sm mb-6">Fill out the form below to join the campaign volunteer network or share your suggestions for Ibarapa East Constituency.</p>
+
+                            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name *</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-apcGreen text-sm" placeholder="Enter your full name">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number *</label>
+                                        <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-apcGreen text-sm" placeholder="+234 ...">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ward / Location in Ibarapa East *</label>
+                                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-apcGreen text-sm" placeholder="e.g. Eruwa Ward 1">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">I want to *</label>
+                                        <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-apcGreen text-sm">
+                                            <option>Volunteer for Campaign</option>
+                                            <option>Donate / Support Financially</option>
+                                            <option>Share Constituency Feedback</option>
+                                            <option>Invite Candidate to Event</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Message or Inquiry</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-apcGreen text-sm" placeholder="Write your message here..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-apcGreen text-white py-4 rounded-xl font-bold text-base shadow-lg hover:bg-green-700 transition flex items-center justify-center">
+                                    <i class="fas fa-paper-plane mr-2 text-apcGold"></i> Submit & Join Movement
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-apcDark text-white pt-16 pb-12 border-t-4 border-apcGold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="logo.svg" onerror="this.src='https://placehold.co/40x40/006633/ffffff?text=BABS'" alt="Logo" class="w-10 h-10 rounded-full object-cover border border-apcGold">
+                        <span class="font-extrabold text-lg text-white">HON. BABS 2027</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Vision to Lead. Capacity to Deliver. Committed to transparent legislative representation, grassroots development, and empowerment in Ibarapa East Constituency.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-bold text-apcGold mb-4 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><button onclick="switchTab('home')" class="hover:text-apcGold transition">Home</button></li>
+                        <li><button onclick="switchTab('about')" class="hover:text-apcGold transition">About Hon. Babs</button></li>
+                        <li><button onclick="switchTab('political')" class="hover:text-apcGold transition">Political Life & Agenda</button></li>
+                        <li><button onclick="switchTab('community')" class="hover:text-apcGold transition">Community Support</button></li>
+                        <li><button onclick="switchTab('media')" class="hover:text-apcGold transition">News & Gallery</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-bold text-apcGold mb-4 uppercase tracking-wider">Key Focus Areas</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-apcGold mr-2"></i> Legislative Excellence</li>
+                        <li><i class="fas fa-check text-apcGold mr-2"></i> Youth & Student Empowerment</li>
+                        <li><i class="fas fa-check text-apcGold mr-2"></i> Agricultural Support</li>
+                        <li><i class="fas fa-check text-apcGold mr-2"></i> Infrastructural Development</li>
+                        <li><i class="fas fa-check text-apcGold mr-2"></i> Community Welfare</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-bold text-apcGold mb-4 uppercase tracking-wider">Stay Connected</h4>
+                    <p class="text-sm text-gray-400 mb-4">Subscribe for campaign updates and upcoming constituency town halls.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email address" class="px-4 py-2.5 rounded-l-xl bg-white/10 border border-white/20 text-sm text-white focus:outline-none w-full">
+                        <button onclick="openModal('subscribeModal')" class="bg-apcGold text-apcDark px-4 py-2.5 rounded-r-xl font-bold text-sm hover:bg-yellow-400 transition"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2027 Hon. Babatunde Sunday Ogunlade (BABS) Campaign Organization. All Rights Reserved.</p>
+                <p class="text-apcGold font-semibold">All Progressives Congress (APC) • Ibarapa East State Constituency</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Volunteer Modal -->
+    <div id="volunteerModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative animate-fadeIn">
+            <button onclick="closeModal('volunteerModal')" class="absolute top-4 right-4 text-gray-400 hover:text-apcDark text-xl"><i class="fas fa-times"></i></button>
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 bg-apcGreen/10 text-apcGreen rounded-full flex items-center justify-center text-2xl mx-auto mb-3">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="text-2xl font-black text-apcDark">Join the BABS 2027 Movement</h3>
+                <p class="text-sm text-gray-600 mt-1">Be part of the winning team for Ibarapa East OYHA 2027.</p>
+            </div>
+            <form onsubmit="handleModalSubmit(event, 'volunteerModal')" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name *</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-apcGreen" placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number / WhatsApp *</label>
+                    <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-apcGreen" placeholder="+234 ...">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ward / Location *</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-apcGreen" placeholder="e.g. Eruwa Ward 2">
+                </div>
+                <button type="submit" class="w-full bg-apcGreen text-white py-3.5 rounded-xl font-bold shadow-lg hover:bg-green-700 transition">Confirm Volunteer Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- News Modal 1 -->
+    <div id="newsModal1" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button onclick="closeModal('newsModal1')" class="absolute top-4 right-4 text-gray-400 hover:text-apcDark text-xl"><i class="fas fa-times"></i></button>
+            <span class="text-xs font-bold text-apcGreen uppercase bg-green-100 px-3 py-1 rounded-full">Press Release</span>
+            <h3 class="text-2xl font-black text-apcDark mt-3 mb-4">Hon. Babs Declares Intention for Oyo State House of Assembly 2027</h3>
+            <p class="text-xs text-gray-500 mb-4"><i class="far fa-calendar-alt mr-1"></i> October 2026 • Eruwa, Oyo State</p>
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                <p>In a momentous gathering of party stalwarts, youth leaders, and elders in Eruwa, Hon. Babatunde Sunday Ogunlade (BABS) officially declared his intention to contest for the Oyo State House of Assembly under the platform of the All Progressives Congress (APC) representing Ibarapa East Constituency for the 2027 general elections.</p>
+                <p>Highlighting his rich background as an M.Sc. holder in Accounting from the University of Lagos and Managing Director of Skylark Homes & Properties Ltd, Hon. Babs emphasized that his legislative agenda is anchored on financial prudence, infrastructural growth, youth empowerment, and robust community welfare.</p>
+                <p>"We have the vision to lead and the capacity to deliver. Ibarapa East deserves transparent, accountable, and vibrant representation," Hon. Babs stated to thunderous applause.</p>
+            </div>
+            <button onclick="closeModal('newsModal1')" class="mt-6 w-full bg-apcDark text-white py-3 rounded-xl font-bold">Close</button>
+        </div>
+    </div>
+
+    <!-- News Modal 2 -->
+    <div id="newsModal2" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button onclick="closeModal('newsModal2')" class="absolute top-4 right-4 text-gray-400 hover:text-apcDark text-xl"><i class="fas fa-times"></i></button>
+            <span class="text-xs font-bold text-apcGold uppercase bg-yellow-100 px-3 py-1 rounded-full text-yellow-800">Community Outreach</span>
+            <h3 class="text-2xl font-black text-apcDark mt-3 mb-4">Empowering Ibarapa Youths Through Digital & Vocational Skills</h3>
+            <p class="text-xs text-gray-500 mb-4"><i class="far fa-calendar-alt mr-1"></i> September 2026 • Ibarapa East</p>
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                <p>As part of his continuous commitment to grassroots human capital development, Hon. Babatunde Sunday Ogunlade sponsored a comprehensive youth skills acquisition workshop across Ibarapa East.</p>
+                <p>The program equipped dozens of young men and women with vocational training, digital literacy tools, and startup grants to foster economic self-reliance. Beneficiaries expressed profound gratitude for his unwavering dedication to the community's progress.</p>
+            </div>
+            <button onclick="closeModal('newsModal2')" class="mt-6 w-full bg-apcDark text-white py-3 rounded-xl font-bold">Close</button>
+        </div>
+    </div>
+
+    <!-- News Modal 3 -->
+    <div id="newsModal3" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <button onclick="closeModal('newsModal3')" class="absolute top-4 right-4 text-gray-400 hover:text-apcDark text-xl"><i class="fas fa-times"></i></button>
+            <span class="text-xs font-bold text-apcBlue uppercase bg-blue-100 px-3 py-1 rounded-full">Party Leadership</span>
+            <h3 class="text-2xl font-black text-apcDark mt-3 mb-4">APC Stakeholders Endorse Unity and Grassroots Mobilization</h3>
+            <p class="text-xs text-gray-500 mb-4"><i class="far fa-calendar-alt mr-1"></i> August 2026 • Oyo State</p>
+            <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                <p>Prominent chieftains of the All Progressives Congress (APC) in Oyo State have lauded Hon. Babatunde Sunday Ogunlade for his steadfast party loyalty since 2003, his demonstration of sportsmanship during the 2023 elections, and his tangible contributions including the donation of a power generator and payment of party house rent.</p>
+                <p>Stakeholders noted that candidates with proven corporate integrity and grassroots commitment are vital for sweeping victory in 2027.</p>
+            </div>
+            <button onclick="closeModal('newsModal3')" class="mt-6 w-full bg-apcDark text-white py-3 rounded-xl font-bold">Close</button>
+        </div>
+    </div>
+
+    <!-- Notification Success Modal -->
+    <div id="notificationModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl relative animate-fadeIn">
+            <div class="w-16 h-16 bg-green-100 text-apcGreen rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-xl font-black text-apcDark mb-2" id="notifTitle">Success!</h3>
+            <p class="text-sm text-gray-600 mb-6" id="notifMsg">Your submission has been received successfully. Welcome to the movement!</p>
+            <button onclick="closeModal('notificationModal')" class="w-full bg-apcGreen text-white py-3 rounded-xl font-bold">OK</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Tab Navigation Functionality
+        function switchTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected tab
+            const targetTab = document.getElementById('tab-' + tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
+
+            // Update active state in nav buttons
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.getAttribute('data-tab') === tabId) {
+                    btn.classList.add('text-apcGreen', 'bg-green-50');
+                } else {
+                    btn.classList.remove('text-apcGreen', 'bg-green-50');
+                }
+            });
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Modal Controls
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Form Submission Handlers
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('notifTitle').innerText = 'Thank You!';
+            document.getElementById('notifMsg').innerText = 'Your message or volunteer registration has been successfully submitted to the BABS 2027 campaign office.';
+            openModal('notificationModal');
+            event.target.reset();
+        }
+
+        function handleModalSubmit(event, modalId) {
+            event.preventDefault();
+            closeModal(modalId);
+            document.getElementById('notifTitle').innerText = 'Registration Successful!';
+            document.getElementById('notifMsg').innerText = 'Welcome aboard! You are now a registered volunteer for Hon. Babatunde Sunday Ogunlade Ibarapa East 2027.';
+            openModal('notificationModal');
+            event.target.reset();
+        }
+
+        // Download Manifesto / Summary Card Simulator
+        function downloadManifesto() {
+            document.getElementById('notifTitle').innerText = 'Manifesto Downloaded';
+            document.getElementById('notifMsg').innerText = 'The complete 2027 Legislative Manifesto and Summary Card for Hon. Babatunde Sunday Ogunlade (BABS) has been downloaded successfully.';
+            openModal('notificationModal');
+        }
+
+        // Election Countdown Timer (Target: March 2027 general elections)
+        const electionDate = new Date('March 6, 2027 08:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = electionDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
